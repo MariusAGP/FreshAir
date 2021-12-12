@@ -1,0 +1,49 @@
+body,
+html {
+  height: 100% ;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("src/assets/pictures/layered-waves-2.jpg");
+  height: 100% ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+
+}
+
+.hub-parent {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.hub-co2::ng-deep circle {
+  align-self: center;
+  stroke: lightskyblue !important;
+}
+
+.details-text {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 1000;
+  font-size: 20px;
+  justify-content: center;
+}
+
+.details-circle-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.details-circle {
+  display: flex;
+  flex-direction: column;
+  margin: 60px;
+}

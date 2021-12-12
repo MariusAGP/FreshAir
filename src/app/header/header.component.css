@@ -1,0 +1,29 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.nav {
+  position: absolute;
+  background-color:transparent;
+  margin: 0;
+}
+.nav-text {
+  color: lightskyblue;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+
+.logo {
+  width: 100px;
+  height: 50px;
+  margin-left: 40px;
+}
+
+.margin {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.example-icon {
+  color: dimgray;
+}

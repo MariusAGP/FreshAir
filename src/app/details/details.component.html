@@ -1,0 +1,39 @@
+<div class="bg">
+  <div class="hub-parent">
+    <div class="details-text">
+      <h1>Your Detailed view on all measured values: </h1>
+    </div>
+    <div class="details-circle-group">
+      <div class="details-circle">
+        <h3>Co2: {{sensordata.co2}}ppm</h3>
+        <mat-progress-spinner
+          class="hub-co2"
+          style="margin:0 auto;"
+          [mode]="mode"
+          [value]="value3"
+          [diameter]="160">
+        </mat-progress-spinner>
+      </div>
+      <div class="details-circle">
+        <h3>Humidity: {{sensordata.humidity}}%</h3>
+        <mat-progress-spinner
+          class="hub-co2"
+          style="margin:0 auto;"
+          [mode]="mode"
+          [value]="value2"
+          [diameter]="160">
+        </mat-progress-spinner>
+      </div>
+      <div class="details-circle">
+        <h3>Temperature: {{sensordata.temperature}}°C</h3>
+        <mat-progress-spinner
+          class="hub-co2"
+          style="margin:0 auto;"
+          [mode]="mode"
+          [value]="value1"
+          [diameter]="160">
+        </mat-progress-spinner>
+      </div>
+    </div>
+  </div>
+</div>
