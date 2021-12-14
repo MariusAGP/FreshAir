@@ -32,6 +32,7 @@ export class HubComponent implements OnInit {
     this.getSensordata();
     this.interval = setInterval(() => {
       this.getSensordata();
+      this.sendAlert();
       setTimeout(() => this.mode = 'determinate', 1100);
       this.mode = 'indeterminate';
     }, 5000)
@@ -55,5 +56,15 @@ export class HubComponent implements OnInit {
 
     let result = ((co2 - min_Range) * 100) / (max_Range - min_Range);
     return result;
+  }
+
+  sendAlert() {
+    if (this.sensordata.co2 >= 1800) {
+      alert("The Co2 values have reached a critical point. Please be advised to open the windows!")
+      let audio = new Audio();
+      audio.src = "../assets/sounds/notification.wav/";
+      audio.load();
+      audio.play();
+    }
   }
 }
