@@ -10,17 +10,15 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-
-}
-
-.hub-parent {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
   padding: 0;
+  margin: 0;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+}
+
+.row {
+  position: absolute;
+  width: auto;
 }
 
 .hub-co2::ng-deep circle {
