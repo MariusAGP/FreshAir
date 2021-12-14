@@ -38,7 +38,7 @@ export class HubComponent implements OnInit {
   }
 
   getSensordata() {
-    this.http.get<any>('http://freshair.host/api/get').subscribe(
+    this.http.get<any>('https://www.freshair.host/api/get').subscribe(
       response => {
         console.log(response);
         this.sensordata = response[0];
