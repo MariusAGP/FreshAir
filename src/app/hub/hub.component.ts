@@ -61,8 +61,7 @@ export class HubComponent implements OnInit {
   sendAlert() {
     if (this.sensordata.co2 >= 1800) {
       alert("The Co2 values have reached a critical point. Please be advised to open the windows!")
-      let audio = new Audio();
-      audio.src = "../assets/sounds/notification.wav/";
+      let audio = new Audio('assets/sounds/notification.wav');
       audio.load();
       audio.play();
     }
