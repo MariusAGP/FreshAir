@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProgressSpinnerMode} from "@angular/material/progress-spinner";
 import {HttpClient} from "@angular/common/http";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 export class Sensordata {
   constructor(
@@ -26,7 +27,7 @@ export class HubComponent implements OnInit {
   interval: any;
   sensordata: Sensordata;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.getSensordata();
@@ -59,8 +60,7 @@ export class HubComponent implements OnInit {
   }
 
   sendAlert() {
-    if (this.sensordata.co2 >= 1800) {
-      alert("The Co2 values have reached a critical point. Please be advised to open the windows!")
+    if (this.value3 >= 10) {
       let audio = new Audio('assets/sounds/notification.wav');
       audio.load();
       audio.play();
