@@ -60,7 +60,7 @@ export class HubComponent implements OnInit {
   }
 
   sendAlert() {
-    if (this.value3 >= 10) {
+    if (this.sensordata.co2 >= 1100) {
       let audio = new Audio('assets/sounds/notification.wav');
       audio.load();
       audio.play();
